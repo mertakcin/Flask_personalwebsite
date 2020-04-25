@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class = "jumbotron text-center"> 
+    <h3> akcinmert kişisel web sitesine hoşgeldiniz!</h3>
+    <p>Bu sitede şahsım hakkındaki bilgilere ve projelere ulaşma şansı bulabileceksiniz.</p>
+</div>
+
+<ul>
+
+    {% for article in articles %}
+        <li> 
+            Article Id: {{article.id}} -
+            Title: {{article.title}} -
+            Content: {{article.content}}
+        </li>
+        
+    {% endfor %}
+
+
+</ul>
+
+{% endblock %}
